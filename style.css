@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 5px solid #ffc107;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    display: inline-block;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffca2c;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 20px;
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    display: inline-block;
+}
+
+#earningsResult, #regionStats, #contactsList, #ordersList, #netSalesResult, #netDeliveryResult, #netCostResult {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.orders-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.order {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+    width: 45%;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.order.closed {
+    background-color: #d1ffd1;
+}
+
+.order .details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order button {
+    margin-right: 10px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    background-color: #25D366;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    background-color: #20c157;
+}

@@ -1,0 +1,112 @@
+<header>
+    <h1>Click2Shop</h1>
+</header>
+
+<main>
+    <section id="login">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </section>
+
+    <section id="dashboard" style="display: none;">
+        <h2>لوحة التحكم</h2>
+        <nav>
+            <ul>
+                <li><a href="#addOrder">إضافة الطلبات</a></li>
+                <li><a href="#viewOrders">الطلبات الحالية</a></li>
+                <li><a href="#viewEarnings">عرض الأرباح</a></li>
+                <li><a href="#netSales">صافي سعر البيع</a></li>
+                <li><a href="#netDelivery">صافي سعر التوصيل</a></li>
+                <li><a href="#netCost">صافي سعر التكلفة</a></li>
+                <li><a href="#topRegions">المناطق الأكثر طلبا</a></li>
+                <li><a href="#contacts">الأسماء والهواتف</a></li>
+            </ul>
+        </nav>
+
+        <div id="addOrder" class="content">
+            <h3>إضافة الطلبات</h3>
+            <form id="orderForm">
+                <label for="orderName">اسم الطلب:</label>
+                <input type="text" id="orderName" name="orderName" required>
+                <label for="deliveryPrice">سعر التوصيل:</label>
+                <input type="number" id="deliveryPrice" name="deliveryPrice" required>
+                <label for="packagePrice">سعر الطرد:</label>
+                <input type="number" id="packagePrice" name="packagePrice" required>
+                <label for="costPrice">سعر التكلفة:</label>
+                <input type="number" id="costPrice" name="costPrice" required>
+                <label for="customerName">باسم:</label>
+                <input type="text" id="customerName" name="customerName" required>
+                <label for="region">المنطقة:</label>
+                <select id="region" name="region" required>
+                    <option value="القدس">القدس</option>
+                    <option value="الخليل">الخليل</option>
+                    <option value="نابلس">نابلس</option>
+                    <option value="رام الله والبيرة">رام الله والبيرة</option>
+                    <option value="جنين">جنين</option>
+                    <option value="طولكرم">طولكرم</option>
+                    <option value="قلقيلية">قلقيلية</option>
+                    <option value="بيت لحم">بيت لحم</option>
+                    <option value="أريحا والأغوار">أريحا والأغوار</option>
+                    <option value="طوباس">طوباس</option>
+                    <option value="سلفيت">سلفيت</option>
+                    <option value="مناطق 48">مناطق 48</option>
+                </select>
+                <label for="village">القرية:</label>
+                <input type="text" id="village" name="village" required>
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <input type="hidden" id="user" name="user">
+                <button type="submit">إضافة الطلب</button>
+            </form>
+        </div>
+
+        <div id="viewOrders" class="content" style="display: none;">
+            <h3>الطلبات الحالية</h3>
+            <div id="ordersList" class="orders-list"></div>
+        </div>
+
+        <div id="viewEarnings" class="content" style="display: none;">
+            <h3>عرض الأرباح</h3>
+            <label for="filter">عرض الأرباح خلال:</label>
+            <select id="filter">
+                <option value="day">يوم</option>
+                <option value="week">أسبوع</option>
+                <option value="month">شهر</option>
+                <option value="year">سنة</option>
+            </select>
+            <div id="earningsResult"></div>
+            <p id="netEarnings">صافي الربح:</p>
+        </div>
+
+        <div id="netSales" class="content" style="display: none;">
+            <h3>صافي سعر البيع</h3>
+            <div id="netSalesResult"></div>
+        </div>
+
+        <div id="netDelivery" class="content" style="display: none;">
+            <h3>صافي سعر التوصيل</h3>
+            <div id="netDeliveryResult"></div>
+        </div>
+
+        <div id="netCost" class="content" style="display: none;">
+            <h3>صافي سعر التكلفة</h3>
+            <div id="netCostResult"></div>
+        </div>
+
+        <div id="topRegions" class="content" style="display: none;">
+            <h3>المناطق الأكثر طلبا</h3>
+            <div id="regionStats"></div>
+        </div>
+
+        <div id="contacts" class="content" style="display: none;">
+            <h3>الأسماء والهواتف</h3>
+            <div id="contactsList"></div>
+        </div>
+    </section>
+</main>
